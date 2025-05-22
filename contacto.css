@@ -1,0 +1,404 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #143c7d 0%, #6fd4ff 100%);
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* para burbujas */
+}
+
+/* NAVBAR y MINI CONTENEDOR */
+.navbar-bg {
+  background: #143c7d;
+  width: 100%;
+}
+.navbar-mini-container {
+  background: #092e72;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 12px 12px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 54px;
+  box-shadow: 0 2px 8px rgba(20,60,125,0.07);
+  position: relative;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  z-index: 20;
+  cursor: pointer;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  padding: 0;
+  margin: 0;
+  transition: max-height 0.3s;
+}
+.nav-list li {
+  display: flex;
+}
+.nav-list li a {
+  color: #fff;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.18rem;
+  letter-spacing: 1px;
+  padding: 8px 18px;
+  border-radius: 7px;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+}
+.nav-list li a:hover,
+.nav-list li a.active {
+  background: #4ad1ff;
+  color: #143c7d;
+}
+
+/* CONTENIDO CONTACTO */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0 2em 0;
+  position: relative; /* para las burbujas */
+  z-index: 1;
+}
+
+.contacto-card {
+  background: rgba(255,255,255,0.94);
+  border-radius: 28px;
+  box-shadow: 0 2px 18px rgba(35, 72, 140, 0.11);
+  padding: 2.5em 2.5em 2em 2.5em;
+  max-width: 900px;
+  width: 97vw;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.7s;
+  z-index: 2;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: none;}
+}
+
+.contacto-card h2 {
+  color: #2567B0;
+  font-size: 2.2em;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+  letter-spacing: 0.05em;
+}
+
+.contacto-descripcion {
+  font-size: 1.12em;
+  margin-bottom: 1.7em;
+  color: #143c7d;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.contacto-grid {
+  display: flex;
+  gap: 2.5em;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contacto-info {
+  flex: 1 1 260px;
+  min-width: 240px;
+  margin-bottom: 1em;
+}
+.contacto-info p {
+  margin-bottom: 1em;
+  font-size: 1.06em;
+}
+.contacto-info i {
+  color: #2567B0;
+  width: 22px;
+  margin-right: 6px;
+}
+.contacto-info a {
+  color: #144389;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.contacto-info a:hover {
+  color: #2567B0;
+}
+
+/* Redes sociales */
+.contacto-social {
+  margin-top: 1.3em;
+}
+.contacto-social p {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+.contacto-social ul {
+  list-style: none;
+  padding-left: 0;
+}
+.contacto-social li {
+  margin-bottom: 0.5em;
+}
+.contacto-social a {
+  color: #2567B0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px dotted #2567B0;
+}
+.contacto-social a:hover {
+  color: #0f2d57;
+  border-bottom: 1px solid #0f2d57;
+}
+
+/* Formulario */
+.contacto-form {
+  flex: 1 1 290px;
+  min-width: 220px;
+  background: #f7fbff;
+  border-radius: 16px;
+  box-shadow: 0 1px 10px #0001;
+  padding: 1.8em 1.3em 1.2em 1.3em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  animation: fadeIn 1.2s;
+}
+.contacto-form label {
+  font-weight: 500;
+  color: #144389;
+  margin-bottom: 0.2em;
+}
+.contacto-form input,
+.contacto-form textarea {
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.6em 0.8em;
+  border: 1.2px solid #b5ccf2;
+  border-radius: 7px;
+  background: #fff;
+  margin-bottom: 0.7em;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border-color: #2567B0;
+  box-shadow: 0 0 2px #2567B099;
+}
+.contacto-form textarea {
+  resize: vertical;
+  min-height: 80px;
+  max-height: 220px;
+}
+.contacto-form button {
+  background: linear-gradient(90deg, #2567B0 60%, #6fd4ff 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 7px;
+  padding: 0.7em 0;
+  cursor: pointer;
+  box-shadow: 0 2px 10px #2567B033;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 0.8em;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+}
+.contacto-form button:hover {
+  background: linear-gradient(90deg, #144389 60%, #4ad1ff 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.bubbles {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+.bubble {
+  position: absolute;
+  bottom: -80px;
+  background: rgba(74,209,255,0.32); /* Más visible */
+  border-radius: 50%;
+  opacity: 0.95; /* Más visible */
+  animation: bubbleUp 9s linear infinite;
+}
+.bubble:nth-child(1) {
+  left: 12%;
+  width: 64px; height: 64px;
+  animation-delay: 0s;
+}
+.bubble:nth-child(2) {
+  left: 40%;
+  width: 40px; height: 40px;
+  animation-delay: 2s;
+}
+.bubble:nth-child(3) {
+  left: 76%;
+  width: 54px; height: 54px;
+  animation-delay: 1.2s;
+}
+.bubble:nth-child(4) {
+  left: 30%;
+  width: 32px; height: 32px;
+  animation-delay: 3.2s;
+}
+.bubble:nth-child(5) {
+  left: 60%;
+  width: 70px; height: 70px;
+  animation-delay: 4s;
+}
+@keyframes bubbleUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.85;
+  }
+  30% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-700px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* FOOTER igual al de INICIO */
+footer {
+  width: 100%;
+  background: none;
+}
+.footer-bar {
+  background: #092e72;
+  width: 100%;
+  padding: 22px 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 8px;
+}
+/* Ambos logos del mismo tamaño y bien alineados */
+.footer-logos img {
+  height: 54px;
+  width: 108px;
+  object-fit: contain;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  display: block;
+}
+.logo-ags {
+  mix-blend-mode: multiply;
+}
+.footer-text {
+  font-size: 0.97rem;
+  letter-spacing: 1px;
+  color: #cce6ff;
+  text-align: center;
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 700px) {
+  .navbar-mini-container {
+    height: auto;
+    border-radius: 0 0 8px 8px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    background: #092e72;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    gap: 0;
+    box-shadow: 0 8px 20px rgba(20,60,125,0.07);
+    transition: max-height 0.3s;
+    z-index: 10;
+  }
+  .nav-list.open {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+  .nav-list li { width: 100%; }
+  .nav-list li a {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    border-radius: 0;
+  }
+}
+
+/* Responsive card, grid y footer */
+@media (max-width: 900px) {
+  .contacto-card { padding: 1.5em 0.6em; }
+  .contacto-grid { flex-direction: column; gap: 1em; align-items: stretch;}
+  .contacto-info, .contacto-form { min-width: 0; }
+  .contacto-card h2 { font-size: 1.35em;}
+  .footer-logos img { height: 40px; width: 80px; }
+  .footer-text { font-size: 0.91rem; }
+}
+@media (max-width: 600px) {
+  .footer-logos img { height: 28px; width: 56px; }
+  .footer-text { font-size: 0.91rem; }
+  .contacto-card { padding: 0.9em 0.3em; }
+}
+@media (max-width: 400px) {
+  .contacto-card { padding: 0.3em 0.1em; }
+  .contacto-form { padding: 0.8em 0.5em; }
+  .footer-logos img { height: 18px; width: 36px; }
+}

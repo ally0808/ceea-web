@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CEEA - Comités</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="comites.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar-bg">
+    <div class="navbar-mini-container">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+      <ul class="nav-list" id="navbarList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="comites.html" class="active">Comités</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1><span class="titulo-destacado">Comités Estratégicos</span></h1>
+    <p class="intro">
+      El CEEA está organizado en comités especializados que abordan diferentes áreas clave para el desarrollo del estado. Cada comité está integrado por expertos, empresarios y representantes del sector público.
+    </p>
+    <div class="comite">
+      <div class="comite-text">
+        <h2>Sustentabilidad:</h2>
+        <p>Promueve prácticas responsables con el medio ambiente.</p>
+      </div>
+      <img src="https://ri.caduinmobiliaria.com/assets/cadu/images/content/comite-2.png" alt="Sustentabilidad">
+    </div>
+    <div class="comite">
+      <div class="comite-text">
+        <h2>Innovación y Tecnología:</h2>
+        <p>Impulsa la transformación digital empresarial.</p>
+      </div>
+      <img src="https://5092991.fs1.hubspotusercontent-na1.net/hubfs/5092991/Blog%20notas%20maestrias%20y%20diplomados/Innovaci%C3%B3n%20tecnol%C3%B3gica.jpg" alt="Innovación y Tecnología">
+    </div>
+    <div class="comite">
+      <div class="comite-text">
+        <h2>Desarrollo Agroalimentario:</h2>
+        <p>Apoya el crecimiento del sector agroindustrial.</p>
+      </div>
+      <img src="https://www.gob.mx/cms/uploads/article/main_image/25755/JITOMATE.jpg" alt="Desarrollo Agroalimentario">
+    </div>
+    <div class="comite">
+      <div class="comite-text">
+        <h2>Relaciones Institucionales:</h2>
+        <p>Fomenta alianzas con organismos públicos y privados.</p>
+      </div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3N-ibt1_DVk8D-L5CU1r7xf6nIpsgmZeJag&s" alt="Relaciones Institucionales">
+    </div>
+    <div class="comite">
+      <div class="comite-text">
+        <h2>Educación y Talento:</h2>
+        <p>Enlace con universidades y formación de capital humano.</p>
+      </div>
+      <img src="https://www.peretarres.org/media/5946/comites-detica-leducacio-social.jpg?anchor=center&mode=crop&width=1140&height=490&rnd=132895735230000000" alt="Educación y Talento">
+    </div>
+  </div>
+  <!-- FOOTER igual al de INICIO -->
+  <footer>
+    <div class="footer-bar">
+      <div class="footer-logos">
+        <img src="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/475318491_10161382769584163_4528982112398733791_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFZmq6jy52jisclNRkyAjxUO3GujgxyD6g7ca6ODHIPqAJn_Xe5zoJYfrWEAQbRGvIBYFZIY4UU5v9lf3foCa9A&_nc_ohc=f1PZXl8mDDAQ7kNvwF6E8z3&_nc_oc=AdkZxcu75bWi5XejS7ftDpKqmSzFpTeEJGSnQDjFVxPkRqkpWLOUSY4QlJDtG8Z7RSo2tdjZ_O84TYLI4max61s9&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=cC7fl4hf_cbv5arWxXK28A&oh=00_AfLwevKzFjpTdFL9zMotm3M5hbwqCwRUWlTp0q98pH2pgQ&oe=6833E677" alt="AGS EI" class="logo-ags">
+        <img src="https://static.wixstatic.com/media/e26601_938afa7daacc48428d7f81b7327da453~mv2.png/v1/crop/x_0,y_1,w_390,h_184/fill/w_108,h_54,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/White%20investel.png" alt="Investel" class="logo-investel">
+      </div>
+      <div class="footer-text">
+        2025 Consejo Estatal Empresarial de Aguascalientes &copy;
+      </div>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script>
+    // Animación escalonada de aparición para los comités
+    document.addEventListener("DOMContentLoaded", function() {
+      const comites = document.querySelectorAll('.comite');
+      comites.forEach((comite, i) => {
+        setTimeout(() => {
+          comite.style.transition = 'opacity 2.5s, transform 2.5s';
+          comite.style.opacity = '1';
+          comite.style.transform = 'none';
+        }, 140 * i);
+      });
+    });
+  </script>
+</body>
+</html>

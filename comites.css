@@ -1,0 +1,306 @@
+/* RESET y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #143c7d 0%, #6fd4ff 100%);
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR y MINI CONTENEDOR */
+.navbar-bg {
+  background: #143c7d;
+  width: 100%;
+}
+.navbar-mini-container {
+  background: #092e72;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 12px 12px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 54px;
+  box-shadow: 0 2px 8px rgba(20,60,125,0.07);
+  position: relative;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  z-index: 20;
+  cursor: pointer;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  padding: 0;
+  margin: 0;
+  transition: max-height 0.3s;
+}
+.nav-list li {
+  display: flex;
+}
+.nav-list li a {
+  color: #fff;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.18rem;
+  letter-spacing: 1px;
+  padding: 8px 18px;
+  border-radius: 7px;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+}
+.nav-list li a:hover, .nav-list li a.active {
+  background: #4ad1ff;
+  color: #143c7d;
+}
+
+/* CONTENIDO */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #e3edfc;
+  padding: 20px 40px 40px 40px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #144389;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 2em;
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
+}
+
+.intro {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* Animación fade in igual a contacto */
+@keyframes fadeInComite {
+  from { opacity: 0; transform: translateY(30px);}
+  to   { opacity: 1; transform: none;}
+}
+
+.comite {
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px 16px;
+  box-shadow: 0 2px 10px #0001;
+  transition: 
+    background 0.3s,
+    box-shadow 0.3s,
+    transform 0.2s;
+  opacity: 0;
+  transform: translateY(30px);
+  /* la animación se dispara por JS, así que no poner animation aquí */
+}
+
+/* Efecto seleccionado al pasar el mouse */
+.comite:hover {
+  background: #d3eaff;
+  box-shadow: 0 6px 22px #143c7d33;
+  transform: scale(1.025);
+  cursor: pointer;
+}
+.comite:hover .comite-text h2 {
+  color: #0a2c62;
+}
+
+.comite:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.comite h2 {
+  color: #144389;
+  font-size: 1.2em;
+  margin-bottom: 3px;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.comite p {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+}
+
+.comite img {
+  min-width: 120px;
+  width: 180px;
+  max-width: 45vw;
+  height: 110px;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px #0002;
+}
+
+.comite-text {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+/* FOOTER igual al de INICIO */
+footer {
+  width: 100%;
+  background: none;
+  margin-top: auto;
+}
+.footer-bar {
+  background: #092e72;
+  width: 100%;
+  padding: 22px 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 8px;
+}
+/* Ambos logos del mismo tamaño y bien alineados */
+.footer-logos img {
+  height: 54px;
+  width: 108px;
+  object-fit: contain;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  display: block;
+}
+.logo-ags {
+  mix-blend-mode: multiply;
+}
+.footer-text {
+  font-size: 0.97rem;
+  letter-spacing: 1px;
+  color: #cce6ff;
+  text-align: center;
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 900px) {
+  .container {
+    max-width: 98vw;
+    padding: 16px 8vw;
+  }
+  .comite {
+    gap: 14px;
+    padding: 14px 10px;
+  }
+  .footer-logos img { height: 40px; width: 80px; }
+  .footer-text { font-size: 0.91rem; }
+}
+@media (max-width: 700px) {
+  .navbar-mini-container {
+    height: auto;
+    border-radius: 0 0 8px 8px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    background: #092e72;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    gap: 0;
+    box-shadow: 0 8px 20px rgba(20,60,125,0.07);
+    transition: max-height 0.3s;
+    z-index: 10;
+  }
+  .nav-list.open {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+  .nav-list li {
+    width: 100%;
+  }
+  .nav-list li a {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    border-radius: 0;
+  }
+  .comite { flex-direction: column !important; text-align: center; }
+  .footer-logos img { height: 40px; width: 80px; }
+  .footer-text { font-size: 0.91rem; }
+}
+@media (max-width: 650px) {
+  .container {
+    padding: 12px 2vw;
+  }
+  .comite {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 14px 6px;
+  }
+  .comite img {
+    width: 90vw;
+    max-width: 98vw;
+    height: 110px;
+    margin: 0 auto 10px auto;
+  }
+}
+@media (max-width: 600px) {
+  .footer-logos img {
+    height: 28px;
+    width: 56px;
+  }
+  .footer-text {
+    font-size: 0.91rem;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    padding: 5px 1vw;
+  }
+  .comite img {
+    width: 98vw;
+    height: 80px;
+  }
+  h1 {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+  }
+  .footer-logos img { height: 18px; width: 36px; }
+}

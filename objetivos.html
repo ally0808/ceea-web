@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEEA - Nuestros Objetivos</title>
+  <link rel="stylesheet" href="objetivos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar-bg">
+    <div class="navbar-mini-container">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+      <ul class="nav-list" id="navbarList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="objetivos.html" class="active">Objetivos</a></li>
+        <li><a href="comites.html">Comités</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- FONDO DE BURBUJAS COMO EN INICIO -->
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <!-- TÍTULO SOBRE LOS CONTENEDORES -->
+  <h2 class="objetivos-titulo-contenedores">Nuestros Objetivos</h2>
+  <!-- CONTENEDORES DE EJEMPLOS DE OBJETIVOS -->
+  <section class="objetivos-cards-row">
+    <div class="objetivos-grid-card fade-in-card">
+      <i class="fa-solid fa-users"></i>
+      <h3>Unidad Empresarial</h3>
+      <p>
+        Organización de foros y encuentros empresariales donde participan compañías locales para compartir buenas prácticas y fortalecer la red empresarial en Aguascalientes.
+      </p>
+    </div>
+    <div class="objetivos-grid-card fade-in-card delay-1">
+      <i class="fa-solid fa-leaf"></i>
+      <h3>Desarrollo Sustentable</h3>
+      <p>
+        Lanzamiento de programas que incentivan la adopción de energías renovables y certificaciones verdes en las empresas del estado.
+      </p>
+    </div>
+    <div class="objetivos-grid-card fade-in-card delay-2">
+      <i class="fa-solid fa-comments"></i>
+      <h3>Diálogo Sector Privado-Estado</h3>
+      <p>
+        Reuniones periódicas con autoridades para atender necesidades empresariales y proponer soluciones conjuntas.
+      </p>
+    </div>
+    <div class="objetivos-grid-card fade-in-card delay-3">
+      <i class="fa-solid fa-lightbulb"></i>
+      <h3>Innovación, Inversión y Responsabilidad Social</h3>
+      <p>
+        Impulso a proyectos tecnológicos y campañas solidarias que beneficien tanto a las empresas como a la sociedad.
+      </p>
+    </div>
+    <div class="objetivos-grid-card fade-in-card delay-4">
+      <i class="fa-solid fa-handshake"></i>
+      <h3>Paz Laboral</h3>
+      <p>
+        Firma de acuerdos institucionales con sindicatos y autoridades para mantener un clima laboral estable y colaborativo.
+      </p>
+    </div>
+  </section>
+  <!-- FOOTER igual al de INICIO -->
+  <footer>
+    <div class="footer-bar">
+      <div class="footer-logos">
+        <img src="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/475318491_10161382769584163_4528982112398733791_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFZmq6jy52jisclNRkyAjxUO3GujgxyD6g7ca6ODHIPqAJn_Xe5zoJYfrWEAQbRGvIBYFZIY4UU5v9lf3foCa9A&_nc_ohc=f1PZXl8mDDAQ7kNvwF6E8z3&_nc_oc=AdkZxcu75bWi5XejS7ftDpKqmSzFpTeEJGSnQDjFVxPkRqkpWLOUSY4QlJDtG8Z7RSo2tdjZ_O84TYLI4max61s9&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=cC7fl4hf_cbv5arWxXK28A&oh=00_AfLwevKzFjpTdFL9zMotm3M5hbwqCwRUWlTp0q98pH2pgQ&oe=6833E677" alt="AGS EI" class="logo-ags">
+        <img src="https://static.wixstatic.com/media/e26601_938afa7daacc48428d7f81b7327da453~mv2.png/v1/crop/x_0,y_1,w_390,h_184/fill/w_108,h_54,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/White%20investel.png" alt="Investel" class="logo-investel">
+      </div>
+      <div class="footer-text">
+        2025 Consejo Estatal Empresarial de Aguascalientes &copy;
+      </div>
+    </div>
+  </footer>
+  
+  <script src="menu.js"></script>
+  <script>
+    // Animación de aparición escalonada para cards
+    document.addEventListener("DOMContentLoaded", function(){
+      const cards = document.querySelectorAll('.fade-in-card');
+      cards.forEach((card, i) => {
+        setTimeout(() => { card.classList.add('show'); }, 160 * i + 300);
+      });
+    });
+  </script>
+</body>
+</html>
