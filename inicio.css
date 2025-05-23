@@ -338,6 +338,43 @@ footer {
   .footer-text { font-size: 0.91rem; }
   .btn-accion { font-size: 1em; padding: 0.7em 1em; }
 }
+@media (max-width: 700px) {
+  .navbar-mini-container {
+    height: auto;
+    border-radius: 0 0 8px 8px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    background: #092e72;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    gap: 0;
+    box-shadow: 0 8px 20px rgba(20,60,125,0.07);
+    transition: max-height 0.3s;
+    z-index: 10;
+  }
+  .nav-list.open {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+  .nav-list li {
+    width: 100%;
+  }
+  .nav-list li a {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    border-radius: 0;
+  }
+}
 @media (max-width: 600px) {
   .logo-hero { max-width: 62px; width: 62px; }
   .hero-titles h2 { font-size: 1rem; }
