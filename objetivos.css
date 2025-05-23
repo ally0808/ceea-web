@@ -158,13 +158,12 @@ main {
   position: relative;
 }
 
-/* CARDS DESTACADOS ABAJO */
+/* CARDS DESTACADOS EN FILAS */
 .objetivos-cards-row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
   margin: 40px auto 30px auto;
   max-width: 1200px;
   background: linear-gradient(180deg, #4ad1ff22 0%, #6fd4ff11 100%);
@@ -173,6 +172,16 @@ main {
   z-index: 2;
   position: relative;
 }
+
+.objetivos-cards-fila {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Card individual */
 .objetivos-grid-card {
   background: #fff;
   border-radius: 20px;
@@ -315,17 +324,38 @@ footer {
     font-size: 1.1rem;
     border-radius: 0;
   }
-  .objetivos-cards-row { flex-direction: column; align-items: center; gap: 16px; }
   .footer-logos img { height: 40px; width: 80px; }
   .footer-text { font-size: 0.91rem; }
 }
+
+/* RESPONSIVE FILAS DE CARDS */
+@media (max-width: 1000px) {
+  .objetivos-cards-fila {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .objetivos-cards-row {
+    gap: 12px;
+    padding: 18px 3px;
+  }
+}
+
+/* Si quieres que en móvil se vea uno debajo de otro */
 @media (max-width: 600px) {
   .objetivos-titulo-contenedores {
     font-size: 1.4em;
     margin-top: 10px;
     margin-bottom: 5px;
   }
-  .objetivos-cards-row { gap: 14px; padding: 16px 2px;}
+  .objetivos-cards-fila {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .objetivos-cards-row {
+    gap: 8px;
+    padding: 10px 0;
+  }
   .objetivos-grid-card { 
     padding: 1.2em 1.2em 1em 1.2em; 
     min-width: 0; 
