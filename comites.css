@@ -72,6 +72,31 @@ body {
   color: #143c7d;
 }
 
+/* Título igual a objetivos y color #144389 */
+.objetivos-titulo-contenedores {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #144389;
+  font-size: 2.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  z-index: 2;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .objetivos-titulo-contenedores {
+    font-size: 1.4em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 400px) {
+  .objetivos-titulo-contenedores {
+    font-size: 1em;
+  }
+}
+
 /* CONTENIDO */
 .container {
   max-width: 700px;
@@ -79,16 +104,6 @@ body {
   background: #e3edfc;
   padding: 20px 40px 40px 40px;
   box-sizing: border-box;
-}
-
-h1 {
-  text-align: center;
-  color: #144389;
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-size: 2em;
-  margin-top: 0.7em;
-  margin-bottom: 0.7em;
 }
 
 .intro {
@@ -190,7 +205,6 @@ footer {
   gap: 28px;
   margin-bottom: 8px;
 }
-/* Ambos logos del mismo tamaño y bien alineados */
 .footer-logos img {
   height: 54px;
   width: 108px;
@@ -297,10 +311,6 @@ footer {
   .comite img {
     width: 98vw;
     height: 80px;
-  }
-  h1 {
-    font-size: 1.2em;
-    letter-spacing: 1px;
   }
   .footer-logos img { height: 18px; width: 36px; }
 }
