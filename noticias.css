@@ -71,16 +71,29 @@ body {
   color: #143c7d;
 }
 
-/* Título principal */
-.noticias-title {
-  color: #fff;
+/* Título igual que objetivos y comités */
+.objetivos-titulo-contenedores {
+  margin-top: 18px;
+  margin-bottom: 10px;
   text-align: center;
-  margin-top: 0.7em;
-  margin-bottom: 0.7em;
+  color: #f8fbff;
   font-size: 2.2em;
-  letter-spacing: 1.5px;
-  font-weight: 500;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.09);
+  font-weight: 700;
+  letter-spacing: 1px;
+  z-index: 2;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .objetivos-titulo-contenedores {
+    font-size: 1.4em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 400px) {
+  .objetivos-titulo-contenedores {
+    font-size: 1em;
+  }
 }
 
 /* CONTENEDOR NOTICIAS */
@@ -175,9 +188,6 @@ footer {
     padding: 1.2em 1em;
     font-size: 0.98em;
   }
-  .noticias-title {
-    font-size: 1.4em;
-  }
   .footer-logos img { height: 40px; width: 80px; }
   .footer-text { font-size: 0.91rem; }
 }
@@ -228,11 +238,6 @@ footer {
     padding: 1em;
     font-size: 0.95em;
     max-width: 98%;
-  }
-  .noticias-title {
-    font-size: 1.1em;
-    margin-top: 1em;
-    margin-bottom: 1.2em;
   }
   .footer-logos img { height: 28px; width: 56px; }
   .footer-text { font-size: 0.91rem; }
